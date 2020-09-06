@@ -14,10 +14,6 @@ class Batch(db.Model):
     donation_center = db.Column(db.ForeignKey(DonationCenter.id))
     imported_at = db.Column(db.DateTime, nullable=False)
 
-    def __init__(self, slug, title):
-        self.slug = slug
-        self.title = title
-
     def __repr__(self):
         return f"<Batch({self.slug!r})>"
 
